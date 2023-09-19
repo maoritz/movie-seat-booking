@@ -32,6 +32,11 @@ body{
     appearance: none;
 }
 
+.container{
+    perspective: 1000px;
+    margin-bottom: 30px;
+}
+
 .seat{
     background-color: #444451;
     height: 12px;
@@ -53,20 +58,20 @@ body{
     margin-right: 18px;
 }
 
-.seat:not(.occupied):hover {
-    cursor: pointer;
-    transform: scale(1.2);
-    background-color:#565662 ;
-  }
-
-
 .seat:nth-last-of-type(2){
     margin-left: 18px;
 }
 
-.showcase .seat:nth-last-of-type(2){
-    margin-left: 18px;
-}
+.seat:not(.occupied):hover {
+    cursor: pointer;
+    transform: scale(1.2);
+  }
+
+.showcase .seat:not(.occupied):hover {
+    cursor: default;
+    transform: scale(1);
+  }
+
 
 .showcase{
     background-color: rgba(0,0,0,0.1);
@@ -91,4 +96,21 @@ body{
 
 .row{
     display: flex;
+}
+
+.screen{
+    background-color: #fff;
+    height: 70px;
+    width: 100%;
+    margin: 15px 0;
+    transform: rotateX(-45deg);
+    box-shadow: 0 3px 10px rgba(255,255,255,0.7);
+}
+
+p.text{
+    margin: 5px 0;
+}
+
+p.text span{
+    color: #6feaf6;
 }
